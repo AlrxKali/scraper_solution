@@ -1,0 +1,13 @@
+<p>form-component works!</p>
+
+
+
+<form method="post" action="." validate>
+    <input type="text" class="form-control" [(ngModel)]="SearchName"
+        placeholder="Enter Search Term">
+
+    <input type="text" class="form-control" [(ngModel)]="SearchQuantity"
+    placeholder="Enter Search Quantity">
+
+    <button (click)="searchTerm()" type="submit" class="btn btn-primary">Get Images</button>
+</form>
