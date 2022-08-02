@@ -15,6 +15,6 @@ export class SharedService {
   // }
 
   startSearch(val:any){
-    return this.http.post(this.APIUrl + '/search', val)
+    return this.http.post(this.APIUrl + 'api/search/', val)
   }
 }

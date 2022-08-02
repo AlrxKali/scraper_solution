@@ -10,22 +10,24 @@ export class FormComponentComponent implements OnInit {
 
   constructor(private service:SharedService) { }
 
-  @Input() search:any;
+  @Input() 
+  search:any;
   SearchId?: string;
-  SearchName?: string;
-  SearchQuantity?: number;
+  search_term?: string;
+  quantity?: number;
 
   ngOnInit(): void {
-    this.SearchId=this.search.SearchId;
-    this.SearchName=this.search.SearchName;
-    this.SearchQuantity=this.search.SearchQuantity;
+    // this.SearchId=this.search.SearchId;
+    // this.SearchName=this.search.SearchName;
+    // this.SearchQuantity=this.search.SearchQuantity;
   }
 
   searchTerm(){
     var val = {SearchId:this.SearchId,
-               SearchName:this.SearchName,
-               SearchQuantity:this.SearchQuantity}
-    this.service.startSearch(val).subscribe(res=>alert(res.toString()))
-  }
-
+                search_term:this.search_term,
+                quantity:this.quantity};
+    this.service.startSearch(val).subscribe(res=>{
+    alert(res.toString());
+    });
+    }
 }

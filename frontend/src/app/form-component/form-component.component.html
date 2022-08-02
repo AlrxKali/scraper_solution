@@ -2,12 +2,10 @@
 
 
 
-<form method="post" action="." validate>
-    <input type="text" class="form-control" [(ngModel)]="SearchName"
-        placeholder="Enter Search Term">
+<form method="post">
+    <input type="text" [(ngModel)]="search_term" name="search_term" placeholder="Enter Search Term">
 
-    <input type="text" class="form-control" [(ngModel)]="SearchQuantity"
-    placeholder="Enter Search Quantity">
+    <input type="number" [(ngModel)]="quantity" name="SearchQuantity" placeholder="Enter Search Quantity">
 
-    <button (click)="searchTerm()" type="submit" class="btn btn-primary">Get Images</button>
+    <button (click)="searchTerm()" type="submit">Get Images</button>
 </form>

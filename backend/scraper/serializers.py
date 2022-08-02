@@ -5,4 +5,4 @@ from .models import Search_Param
 class Search_ParamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Search_Param
-        fields = ['search_term', 'quantity']
+        fields = ['id', 'search_term', 'quantity']
